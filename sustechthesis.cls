@@ -119,8 +119,8 @@
   \renewcommand{\captionfont}{\bfseries\songti\zihao{5}} %表题,图题用五号宋体加黑
   \DeclareCaptionLabelSeparator{enspace}{\enspace}
   \DeclareCaptionLabelFormat{rightBracket}{#2)}
-  \captionsetup[table]{labelsep=enspace,name={表}} %表序表题之间没有标点,而是一个空格,默认前缀为表
-  \captionsetup[figure]{labelsep=enspace,name={图}} %图序图题之间没有标点,而是一个空格，默认前缀为图
+  \captionsetup[table]{labelsep=enspace} %表序表题之间没有标点,而是一个空格,默认前缀为表
+  \captionsetup[figure]{labelsep=enspace} %图序图题之间没有标点,而是一个空格，默认前缀为图
   \captionsetup[subfigure]{labelformat=rightBracket, labelsep=enspace}% 子图a,b,c外没有括号
 
 \RequirePackage[MSWordLineSpacingMultiple=1.5]{zhlineskip}
@@ -355,7 +355,7 @@
     \vskip 3.25cm
     \begin{flushright}
       \makebox[11em][l]{Signature:}\\
-      \makebox[11em][l]{Date:}
+      \makebox[11em][l]{Date: May 30, 2022}
     \end{flushright}
     }
   \end{spacing}
@@ -365,16 +365,16 @@
 \RequirePackage{listofitems}
 \newcommand\摘要标题{
   \begin{center}
-    \黑体\二号\题目@中\\
-    \ifdefempty{\副标题@中}%
+    \二号\题目@英\\
+    \ifdefempty{\副标题@英}%
       {% empty
         \relax
       }{% not empty
-        \hspace*{\fill} \小二 ——\副标题@中\\
+        \hspace*{\fill} \小二 ——\副标题@英\\
       }%
     \vskip 1cm
-    \宋体\四号\姓名@中 \\[9pt]
-    （\楷书\小四{\系别@中 \quad 指导教师： \指导老师@中}）
+    \四号\姓名@英 \\[9pt]
+    （\小四{\系别@英 \quad Thesis Advisor： \指导老师@英}）
   \end{center}
   \vskip 1.5cm
 }
@@ -415,9 +415,9 @@
 % 参考文献
 \newcommand{\参考文献}{
   % 或者可以将refname置空, 按照附录的样式修改.
-  \addcontentsline{toc}{section}{参考文献}
-  \sectionmark{参考文献}
-  \section*{\centerline{参考文献}}
+  \addcontentsline{toc}{section}{Reference}
+  \sectionmark{Reference}
+  \section*{\centerline{Reference}}
 }
 % 附录
 \newcommand{\附录}{

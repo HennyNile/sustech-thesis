@@ -1,7 +1,221 @@
-@book{Nicholas1998Handbook,
-  author={Nicholas J. Higham},
-  title={Handbook of Writing for the Mathematical Sciences},
-  publisher={Society for Industrial and Applied Mathematics},
-  year={1998},
-  address={Philadelphia},
+@article{marcus2019neo,
+author = {Marcus, Ryan and Negi, Parimarjan and Mao, Hongzi and Zhang, Chi and Alizadeh, Mohammad and Kraska, Tim and Papaemmanouil, Olga and Tatbul, Nesime},
+title = {Neo: A Learned Query Optimizer},
+year = {2019},
+issue_date = {July 2019},
+publisher = {VLDB Endowment},
+volume = {12},
+number = {11},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3342263.3342644},
+doi = {10.14778/3342263.3342644},
+journal = {Proc. VLDB Endow.},
+month = {jul},
+pages = {1705–1718},
+numpages = {14}
 }
+
+@article{sun2019end,
+author = {Sun, Ji and Li, Guoliang},
+title = {An End-to-End Learning-Based Cost Estimator},
+year = {2019},
+issue_date = {November 2019},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {3},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3368289.3368296},
+doi = {10.14778/3368289.3368296},
+journal = {Proc. VLDB Endow.},
+month = {nov},
+pages = {307–319},
+numpages = {13}
+}
+
+@article{yang2020neurocard,
+  title={NeuroCard: one cardinality estimator for all tables},
+  author={Yang, Zongheng and Kamsetty, Amog and Luan, Sifei and Liang, Eric and Duan, Yan and Chen, Xi and Stoica, Ion},
+  journal={PVLDB, 14(1): 61 - 73},
+  year={2021}
+}
+
+@inbook{wu2021unified,
+author = {Wu, Peizhi and Cong, Gao},
+title = {A Unified Deep Model of Learning from Both Data and Queries for Cardinality Estimation},
+year = {2021},
+isbn = {9781450383431},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3448016.3452830},
+booktitle = {Proceedings of the 2021 International Conference on Management of Data},
+pages = {2009–2022},
+numpages = {14}
+}
+
+@article{yang2019deep,
+author = {Yang, Zongheng and Liang, Eric and Kamsetty, Amog and Wu, Chenggang and Duan, Yan and Chen, Xi and Abbeel, Pieter and Hellerstein, Joseph M. and Krishnan, Sanjay and Stoica, Ion},
+title = {Deep Unsupervised Cardinality Estimation},
+year = {2019},
+issue_date = {November 2019},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {3},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3368289.3368294},
+doi = {10.14778/3368289.3368294},
+journal = {Proc. VLDB Endow.},
+month = {nov},
+pages = {279–292},
+numpages = {14}
+}
+
+@article{wang2020we,
+author = {Wang, Xiaoying and Qu, Changbo and Wu, Weiyuan and Wang, Jiannan and Zhou, Qingqing},
+title = {Are We Ready for Learned Cardinality Estimation?},
+year = {2021},
+issue_date = {May 2021},
+publisher = {VLDB Endowment},
+volume = {14},
+number = {9},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3461535.3461552},
+doi = {10.14778/3461535.3461552},
+abstract = {Cardinality estimation is a fundamental but long unresolved problem in query optimization. Recently, multiple papers from different research groups consistently report that learned models have the potential to replace existing cardinality estimators. In this paper, we ask a forward-thinking question: Are we ready to deploy these learned cardinality models in production? Our study consists of three main parts. Firstly, we focus on the static environment (i.e., no data updates) and compare five new learned methods with nine traditional methods on four real-world datasets under a unified workload setting. The results show that learned models are indeed more accurate than traditional methods, but they often suffer from high training and inference costs. Secondly, we explore whether these learned models are ready for dynamic environments (i.e., frequent data updates). We find that they cannot catch up with fast data updates and return large errors for different reasons. For less frequent updates, they can perform better but there is no clear winner among themselves. Thirdly, we take a deeper look into learned models and explore when they may go wrong. Our results show that the performance of learned methods can be greatly affected by the changes in correlation, skewness, or domain size. More importantly, their behaviors are much harder to interpret and often unpredictable. Based on these findings, we identify two promising research directions (control the cost of learned models and make learned models trustworthy) and suggest a number of research opportunities. We hope that our study can guide researchers and practitioners to work together to eventually push learned cardinality estimators into real database systems.},
+journal = {Proc. VLDB Endow.},
+month = {may},
+pages = {1640–1654},
+numpages = {15}
+}
+
+@article{Self-Tuning-Histograms,
+author = {Aboulnaga, Ashraf and Chaudhuri, Surajit},
+title = {Self-Tuning Histograms: Building Histograms without Looking at Data},
+year = {1999},
+issue_date = {June 1999},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {28},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/304181.304198},
+doi = {10.1145/304181.304198},
+abstract = {In this paper, we introduce self-tuning histograms. Although similar in structure to traditional histograms, these histograms infer data distributions not by examining the data or a sample thereof, but by using feedback from the query execution engine about the actual selectivity of range selection operators to progressively refine the histogram. Since the cost of building and maintaining self-tuning histograms is independent of the data size, self-tuning histograms provide a remarkably inexpensive way to construct histograms for large data sets with little up-front costs. Self-tuning histograms are particularly attractive as an alternative to multi-dimensional traditional histograms that capture dependencies between attributes but are prohibitively expensive to build and maintain. In this paper, we describe the techniques for initializing and refining self-tuning histograms. Our experimental results show that self-tuning histograms provide a low-cost alternative to traditional multi-dimensional histograms with little loss of accuracy for data distributions with low to moderate skew.},
+journal = {SIGMOD Rec.},
+month = {jun},
+pages = {181–192},
+numpages = {12}
+}
+
+@inproceedings{Two-Level-Sampling,
+author = {Chen, Yu and Yi, Ke},
+title = {Two-Level Sampling for Join Size Estimation},
+year = {2017},
+isbn = {9781450341974},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3035918.3035921},
+doi = {10.1145/3035918.3035921},
+abstract = {Join size estimation is a critical step in query optimization, and has been extensively studied in the literature. Among the many techniques, sampling based approaches are particularly appealing, due to their ability to handle arbitrary selection predicates. In this paper, we propose a new sampling algorithm for join size estimation, called two-level sampling, which combines the advantages of three previous sampling methods while making further improvements. Both analytical and empirical comparisons show that the new algorithm outperforms all the previous algorithms on a variety of joins, including primary key-foreign key joins, many-to-many joins, and multi-table joins. The new sampling algorithm is also very easy to implement, requiring just one pass over the data. It only relies on some basic statistical information about the data, such as the ℓk-norms and the heavy hitters.},
+booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+pages = {759–774},
+numpages = {16},
+keywords = {joins, sampling},
+location = {Chicago, Illinois, USA},
+series = {SIGMOD '17}
+}
+
+@article{Lan2021ASO,
+  title={A Survey on Advancing the DBMS Query Optimizer: Cardinality Estimation, Cost Model, and Plan Enumeration},
+  author={Hai Lan and Zhifeng Bao and Yuwei Peng},
+  journal={Data Science and Engineering},
+  year={2021},
+  volume={6},
+  pages={86-101}
+}
+
+@article{naru2019,
+author = {Yang, Zongheng and Liang, Eric and Kamsetty, Amog and Wu, Chenggang and Duan, Yan and Chen, Xi and Abbeel, Pieter and Hellerstein, Joseph M. and Krishnan, Sanjay and Stoica, Ion},
+title = {Deep Unsupervised Cardinality Estimation},
+year = {2019},
+issue_date = {November 2019},
+publisher = {VLDB Endowment},
+volume = {13},
+number = {3},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3368289.3368294},
+doi = {10.14778/3368289.3368294},
+abstract = {Cardinality estimation has long been grounded in statistical tools for density estimation. To capture the rich multivariate distributions of relational tables, we propose the use of a new type of high-capacity statistical model: deep autoregressive models. However, direct application of these models leads to a limited estimator that is prohibitively expensive to evaluate for range or wildcard predicates. To produce a truly usable estimator, we develop a Monte Carlo integration scheme on top of autoregressive models that can efficiently handle range queries with dozens of dimensions or more.Like classical synopses, our estimator summarizes the data without supervision. Unlike previous solutions, we approximate the joint data distribution without any independence assumptions. Evaluated on real-world datasets and compared against real systems and dominant families of techniques, our estimator achieves single-digit multiplicative error at tail, an up to 90x accuracy improvement over the second best method, and is space- and runtime-efficient.},
+journal = {Proc. VLDB Endow.},
+month = {nov},
+pages = {279–292},
+numpages = {14}
+}
+
+@inproceedings{deeplearningmodel20,
+author = {Hasan, Shohedul and Thirumuruganathan, Saravanan and Augustine, Jees and Koudas, Nick and Das, Gautam},
+title = {Deep Learning Models for Selectivity Estimation of Multi-Attribute Queries},
+year = {2020},
+isbn = {9781450367356},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3318464.3389741},
+doi = {10.1145/3318464.3389741},
+abstract = {Selectivity estimation - the problem of estimating the result size of queries - is a fundamental problem in databases. Accurate estimation of query selectivity involving multiple correlated attributes is especially challenging. Poor cardinality estimates could result in the selection of bad plans by the query optimizer. Recently, deep learning has been applied to this problem with promising results. However, many of the proposed approaches often struggle to provide accurate results for multi attribute queries involving large number of predicates and with low selectivity. In this paper, we propose two complementary approaches that are effective for this scenario. Our first approach models selectivity estimation as a density estimation problem where one seeks to estimate the joint probability distribution from a finite number of samples. We leverage techniques from neural density estimation to build an accurate selectivity estimator. The key idea is to decompose the joint distribution into a set of tractable conditional probability distributions such that they satisfy the autoregressive property. Our second approach formulates selectivity estimation as a supervised deep learning problem that predicts the selectivity of a given query. We describe how to extend our algorithms for range queries. We also introduce and address a number of practical challenges arising when adapting deep learning for relational data. These include query/data featurization, incorporating query workload information in a deep learning framework and the dynamic scenario where both data and workload queries could be updated. Our extensive experiments with a special emphasis on queries with a large number of predicates and/or small result sizes demonstrates that our proposed techniques provide fast and accurate selective estimates with minimal space overhead.},
+booktitle = {Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data},
+pages = {1035–1050},
+numpages = {16},
+keywords = {deep learning, density estimation, made, neural autoregressive models, selectivity estimation, cardinality estimation},
+location = {Portland, OR, USA},
+series = {SIGMOD '20}
+}
+
+@article{kipf2018learned,
+  title={Learned cardinalities: Estimating correlated joins with deep learning},
+  author={Kipf, Andreas and Kipf, Thomas and Radke, Bernhard and Leis, Viktor and Boncz, Peter and Kemper, Alfons},
+  journal={arXiv preprint arXiv:1809.00677},
+  year={2018}
+}
+
+@inproceedings{Hive,
+author = {Camacho-Rodr\'{\i}guez, Jes\'{u}s and Chauhan, Ashutosh and Gates, Alan and Koifman, Eugene and O'Malley, Owen and Garg, Vineet and Haindrich, Zoltan and Shelukhin, Sergey and Jayachandran, Prasanth and Seth, Siddharth and Jaiswal, Deepak and Bouguerra, Slim and Bangarwa, Nishant and Hariappan, Sankar and Agarwal, Anishek and Dere, Jason and Dai, Daniel and Nair, Thejas and Dembla, Nita and Vijayaraghavan, Gopal and Hagleitner, G\"{u}nther},
+title = {Apache Hive: From MapReduce to Enterprise-Grade Big Data Warehousing},
+year = {2019},
+isbn = {9781450356435},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3299869.3314045},
+doi = {10.1145/3299869.3314045},
+abstract = {Apache Hive is an open-source relational database system for analytic big-data workloads. In this paper we describe the key innovations on the journey from batch tool to fully fledged enterprise data warehousing system. We present a hybrid architecture that combines traditional MPP techniques with more recent big data and cloud concepts to achieve the scale and performance required by today's analytic applications. We explore the system by detailing enhancements along four main axis: Transactions, optimizer, runtime, and federation. We then provide experimental results to demonstrate the performance of the system for typical workloads and conclude with a look at the community roadmap.},
+booktitle = {Proceedings of the 2019 International Conference on Management of Data},
+pages = {1773–1786},
+numpages = {14},
+keywords = {hive, data warehouses, hadoop, databases},
+location = {Amsterdam, Netherlands},
+series = {SIGMOD '19}
+}
+
+@inbook{ssb,
+author = {O'Neil, Patrick and O'Neil, Elizabeth and Chen, Xuedong and Revilak, Stephen},
+title = {The Star Schema Benchmark and Augmented Fact Table Indexing},
+year = {2009},
+isbn = {9783642104237},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-642-10424-4_17},
+abstract = {We provide a benchmark measuring star schema queries retrieving data from a fact table with Where clause column restrictions on dimension tables. Clustering is crucial to performance with modern disk technology, since retrievals with filter factors down to 0.0005 are now performed most efficiently by sequential table search rather than by indexed access. DB2's Multi-Dimensional Clustering (MDC) provides methods to "dice" the fact table along a number of orthogonal "dimensions", but only when these dimensions are columns in the fact table. The diced cells cluster fact rows on several of these "dimensions" at once so queries restricting several such columns can access crucially localized data, with much faster query response. Unfortunately, columns of dimension tables of a star schema are not usually represented in the fact table. In this paper, we show a simple way to adjoin physical copies of dimension columns to the fact table, dicing data to effectively cluster query retrieval, and explain how such dicing can be achieved on database products other than DB2. We provide benchmark measurements to show successful use of this methodology on three commercial database products.},
+booktitle = {Performance Evaluation and Benchmarking: First TPC Technology Conference, TPCTC 2009, Lyon, France, August 24-28, 2009, Revised Selected Papers},
+pages = {237–252},
+numpages = {16}
+}
+
+@book{DatabaseSystems,
+author = {Garcia-Molina, Hector and Ullman, Jeffrey D. and Widom, Jennifer},
+title = {Database Systems: The Complete Book},
+year = {2008},
+isbn = {9780131873254},
+publisher = {Prentice Hall Press},
+address = {USA},
+edition = {2},
+abstract = { This introduction to database systems offers a comprehensive approach, focusing on database design, database use, and implementation of database applications and database management systems. KEY TOPICS: The first half of the book provides in-depth coverage of databases from the point of view of the database designer, user, and application programmer. It covers the latest database standards SQL:1999, SQL/PSM, SQL/CLI, JDBC, ODL, and XML, with broader coverage of SQL than most other texts. The second half of the book covers databases from the point of view of the DBMS implementor, focusing on storage structures, query processing, and transaction management. The book covers the main techniques in these areas with broader coverage of query optimization than most other texts, along with advanced topics including multidimensional and bitmap indexes, distributed transactions, and information integration techniques. Ideal for professionals and students interested in database systems. A basic understanding of algebraic expressions and laws, logic, basic data structure, OOP concepts, and programming environments is implied.}
+}
+

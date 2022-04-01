@@ -1,7 +1,11 @@
 % !Mode:: "TeX:UTF-8"
 % !TEX program  = xelatex
 \begin{英文摘要}{Query Optimizer, Machine Learning, Distributed System, Hive}
-%  \lipsum[1]
+    Cost and cardinality estimation is vital to query optimizer, which can guide the query plan selection. However traditional
+    empirical cost and cardinality estimation techniques cannot provide high-quality estimation, because they may not effectively 
+    capture the correlation between multiple tables. Recently the database community shows that the learning-based cardinality 
+    estimation is better than the empirical methods. However, all of these work takes standalone database as the experiment environment.
+    In this work, we plan to implement a learning-based query optimizer in a distributed data warehouse, hive.
 \end{英文摘要}
 
 % \begin{中文摘要}{\LaTeX ；接口}
