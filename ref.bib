@@ -176,6 +176,24 @@ series = {SIGMOD '20}
   year={2018}
 }
 
+@article{howgood,
+author = {Leis, Viktor and Gubichev, Andrey and Mirchev, Atanas and Boncz, Peter and Kemper, Alfons and Neumann, Thomas},
+title = {How Good Are Query Optimizers, Really?},
+year = {2015},
+issue_date = {November 2015},
+publisher = {VLDB Endowment},
+volume = {9},
+number = {3},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/2850583.2850594},
+doi = {10.14778/2850583.2850594},
+abstract = {Finding a good join order is crucial for query performance. In this paper, we introduce the Join Order Benchmark (JOB) and experimentally revisit the main components in the classic query optimizer architecture using a complex, real-world data set and realistic multi-join queries. We investigate the quality of industrial-strength cardinality estimators and find that all estimators routinely produce large errors. We further show that while estimates are essential for finding a good join order, query performance is unsatisfactory if the query engine relies too heavily on these estimates. Using another set of experiments that measure the impact of the cost model, we find that it has much less influence on query performance than the cardinality estimates. Finally, we investigate plan enumeration techniques comparing exhaustive dynamic programming with heuristic algorithms and find that exhaustive enumeration improves performance despite the sub-optimal cardinality estimates.},
+journal = {Proc. VLDB Endow.},
+month = {nov},
+pages = {204–215},
+numpages = {12}
+}
+
 @inproceedings{Hive,
 author = {Camacho-Rodr\'{\i}guez, Jes\'{u}s and Chauhan, Ashutosh and Gates, Alan and Koifman, Eugene and O'Malley, Owen and Garg, Vineet and Haindrich, Zoltan and Shelukhin, Sergey and Jayachandran, Prasanth and Seth, Siddharth and Jaiswal, Deepak and Bouguerra, Slim and Bangarwa, Nishant and Hariappan, Sankar and Agarwal, Anishek and Dere, Jason and Dai, Daniel and Nair, Thejas and Dembla, Nita and Vijayaraghavan, Gopal and Hagleitner, G\"{u}nther},
 title = {Apache Hive: From MapReduce to Enterprise-Grade Big Data Warehousing},
@@ -218,4 +236,88 @@ address = {USA},
 edition = {2},
 abstract = { This introduction to database systems offers a comprehensive approach, focusing on database design, database use, and implementation of database applications and database management systems. KEY TOPICS: The first half of the book provides in-depth coverage of databases from the point of view of the database designer, user, and application programmer. It covers the latest database standards SQL:1999, SQL/PSM, SQL/CLI, JDBC, ODL, and XML, with broader coverage of SQL than most other texts. The second half of the book covers databases from the point of view of the DBMS implementor, focusing on storage structures, query processing, and transaction management. The book covers the main techniques in these areas with broader coverage of query optimization than most other texts, along with advanced topics including multidimensional and bitmap indexes, distributed transactions, and information integration techniques. Ideal for professionals and students interested in database systems. A basic understanding of algebraic expressions and laws, logic, basic data structure, OOP concepts, and programming environments is implied.}
 }
+
+@inproceedings{MapReduce,
+title	= {MapReduce: Simplified Data Processing on Large Clusters},
+author	= {Jeffrey Dean and Sanjay Ghemawat},
+year	= {2004},
+booktitle	= {OSDI'04: Sixth Symposium on Operating System Design and Implementation},
+pages	= {137--150},
+address	= {San Francisco, CA}
+}
+
+@inproceedings{Calcite,
+author = {Begoli, Edmon and Camacho-Rodr\'{\i}guez, Jes\'{u}s and Hyde, Julian and Mior, Michael J. and Lemire, Daniel},
+title = {Apache Calcite: A Foundational Framework for Optimized Query Processing Over Heterogeneous Data Sources},
+year = {2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3183713.3190662},
+doi = {10.1145/3183713.3190662},
+abstract = {Apache Calcite is a foundational software framework that provides query processing, optimization, and query language support to many popular open-source data processing systems such as Apache Hive, Apache Storm, Apache Flink, Druid, and MapD. The goal of this paper is to formally introduce Calcite to the broader research community, brie y present its history, and describe its architecture, features, functionality, and patterns for adoption. Calcite's architecture consists of a modular and extensible query optimizer with hundreds of built-in optimization rules, a query processor capable of processing a variety of query languages, an adapter architecture designed for extensibility, and support for heterogeneous data models and stores (relational, semi-structured, streaming, and geospatial). This exible, embeddable, and extensible architecture is what makes Calcite an attractive choice for adoption in big-data frameworks. It is an active project that continues to introduce support for the new types of data sources, query languages, and approaches to query processing and optimization.},
+booktitle = {Proceedings of the 2018 International Conference on Management of Data},
+pages = {221–230},
+numpages = {10},
+keywords = {apache calcite, storage adapters, relational semantics, modular query optimization, query algebra, data management},
+location = {Houston, TX, USA},
+series = {SIGMOD '18}
+}
+
+@article{10.1145/376284.375685,
+author = {Deshpande, Amol and Garofalakis, Minos and Rastogi, Rajeev},
+title = {Independence is Good: Dependency-Based Histogram Synopses for High-Dimensional Data},
+year = {2001},
+issue_date = {June 2001},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {30},
+number = {2},
+issn = {0163-5808},
+url = {https://doi.org/10.1145/376284.375685},
+doi = {10.1145/376284.375685},
+abstract = {Approximating the joint data distribution of a multi-dimensional data set through a compact and accurate histogram synopsis is a fundamental problem arising in numerous practical scenarios, including query optimization and approximate query answering. Existing solutions either rely on simplistic independence assumptions or try to directly approximate the full joint data distribution over the complete set of attributes. Unfortunately, both approaches are doomed to fail for high-dimensional data sets with complex correlation patterns between attributes. In this paper, we propose a novel approach to histogram-based synopses that employs the solid foundation of statistical interaction models to explicitly identify and exploit the statistical characteristics of the data. Abstractly, our key idea is to break the synopsis into (1) a statistical interaction model that accurately captures significant correlation and independence patterns in data, and (2) a collection of histograms on low-dimensional marginals that, based on the model, can provide accurate approximations of the overall joint data distribution. Extensive experimental results with several real-life data sets verify the effectiveness of our approach. An important aspect of our general, model-based methodology is that it can be used to enhance the performance of other synopsis techniques that are based on data-space partitioning (e.g., wavelets) by providing an effective tool to deal with the “dimensionality curse”.},
+journal = {SIGMOD Rec.},
+month = {may},
+pages = {199–210},
+numpages = {12}
+}
+
+@inproceedings{independenceisgood,
+author = {Deshpande, Amol and Garofalakis, Minos and Rastogi, Rajeev},
+title = {Independence is Good: Dependency-Based Histogram Synopses for High-Dimensional Data},
+year = {2001},
+isbn = {1581133324},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/375663.375685},
+doi = {10.1145/375663.375685},
+abstract = {Approximating the joint data distribution of a multi-dimensional data set through a compact and accurate histogram synopsis is a fundamental problem arising in numerous practical scenarios, including query optimization and approximate query answering. Existing solutions either rely on simplistic independence assumptions or try to directly approximate the full joint data distribution over the complete set of attributes. Unfortunately, both approaches are doomed to fail for high-dimensional data sets with complex correlation patterns between attributes. In this paper, we propose a novel approach to histogram-based synopses that employs the solid foundation of statistical interaction models to explicitly identify and exploit the statistical characteristics of the data. Abstractly, our key idea is to break the synopsis into (1) a statistical interaction model that accurately captures significant correlation and independence patterns in data, and (2) a collection of histograms on low-dimensional marginals that, based on the model, can provide accurate approximations of the overall joint data distribution. Extensive experimental results with several real-life data sets verify the effectiveness of our approach. An important aspect of our general, model-based methodology is that it can be used to enhance the performance of other synopsis techniques that are based on data-space partitioning (e.g., wavelets) by providing an effective tool to deal with the “dimensionality curse”.},
+booktitle = {Proceedings of the 2001 ACM SIGMOD International Conference on Management of Data},
+pages = {199–210},
+numpages = {12},
+location = {Santa Barbara, California, USA},
+series = {SIGMOD '01}
+}
+
+@inproceedings{lohman2014query,
+  title={Is query optimization a “solved” problem},
+  author={Lohman, Guy},
+  booktitle={Proc. Workshop on Database Query Optimization},
+  volume={13},
+  pages={10},
+  year={2014},
+  organization={Oregon Graduate Center Comp. Sci. Tech. Rep}
+}
+
+@article{dutt2019selectivity,
+  title={Selectivity estimation for range predicates using lightweight models},
+  author={Dutt, Anshuman and Wang, Chi and Nazi, Azade and Kandula, Srikanth and Narasayya, Vivek and Chaudhuri, Surajit},
+  journal={Proceedings of the VLDB Endowment},
+  volume={12},
+  number={9},
+  pages={1044--1057},
+  year={2019},
+  publisher={VLDB Endowment}
+}
+
 

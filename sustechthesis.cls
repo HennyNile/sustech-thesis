@@ -355,7 +355,7 @@
     \vskip 3.25cm
     \begin{flushright}
       \makebox[11em][l]{Signature:}\\
-      \makebox[11em][l]{Date: May 30, 2022}
+      \makebox[11em][l]{Date: June 2, 2022}
     \end{flushright}
     }
   \end{spacing}
@@ -415,9 +415,9 @@
 % 参考文献
 \newcommand{\参考文献}{
   % 或者可以将refname置空, 按照附录的样式修改.
-  \addcontentsline{toc}{section}{Reference}
-  \sectionmark{Reference}
-  \section*{\centerline{Reference}}
+  \addcontentsline{toc}{section}{References}
+  \sectionmark{References}
+  \section*{}
 }
 % 附录
 \newcommand{\附录}{
@@ -432,9 +432,9 @@
 }
 % 致谢
 \newcommand{\致谢}{
-  \addcontentsline{toc}{section}{致谢}
-  \sectionmark{致谢}
-  \section*{\centerline{致谢}}
+  \addcontentsline{toc}{section}{Acknowledgement}
+  \sectionmark{Acknowledgement}
+  \section*{\centerline{Acknowledgement}}
 }
 
 \endinput

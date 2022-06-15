@@ -1,15 +1,26 @@
 % !Mode:: "TeX:UTF-8"
 % !TEX program  = xelatex
 \begin{英文摘要}{Query Optimizer, Machine Learning, Distributed System, Hive}
-    Cost and cardinality estimation is vital to query optimizer, which can guide the query plan selection. However traditional
-    empirical cost and cardinality estimation techniques cannot provide high-quality estimation, because they may not effectively 
-    capture the correlation between multiple tables. Recently the database community shows that the learning-based cardinality 
-    estimation is better than the empirical methods. However, all of these work takes standalone database as the experiment environment.
-    In this work, we plan to implement a learning-based query optimizer in a distributed data warehouse, hive.
+    Cost and cardinality estimation, which could guide the selection of query execution plan, are vital to query optimizer. Traditional
+    empirical cost and cardinality estimation techniques cannot provide accurate estimation, because they fail to effectively 
+    capture the correlation between data of columns and tables. Previous research has established that learning-based cardinality 
+    estimation is better than the empirical methods. However, all these work take standalone database as the experiment environment.
+    The same performance improvement should also hold in distributed systems. Based on such hypothesis, we set an ultimate goal of designing 
+    and implementing a learning-based query optimizer for Hive, a distributed data-processing system. To progressively achieve this goal, this paper 
+    introduces the original Hive optimizer, and designs a technique to evaluate latent performance gain of learning-based optimizer. Experiments are 
+    conducted following the proposed technique. The novelty of this work lies in introducing the idea of learning-based optimizers in distributed systems, 
+    as well as evaluating latent performance gain of learning-based optimizer in distributed system. 
 \end{英文摘要}
 
-% \begin{中文摘要}{\LaTeX ；接口}
+\begin{中文摘要}{查询优化器， 机器学习， 分布式系统， Hive} 
+    成本估计和基数估计可以辅助数据库系统的查询优化器选择最优的查询执行计划，是查询优化器中很重要的一部分。传统的、基于经验的成本和基数估计不能有效地
+    捕捉数据库表间和列间数据的相关性，因此不能得到精确的估计结果。已有的工作展示了基于学习的基数估计方法优于基于经验的方法。然而，这些工作都是以独立
+    机器的数据库作为实验环境。我们认为基于学习的基数估计方法同样可以提升分布式数据处理系统的性能。基于这样的观点，我们制定了为分布式数据处理系统Hive
+    设计并实现一个基于学习的查询优化器的最终目标。为了逐步实现这一目标，本文介绍了Hive的优化器，设计了评估基于学习的优化器的潜在性能提升空间的技术并
+    执行了评估基于学习的优化器的潜在性能提升空间的实验。这项工作的新奇之处在于提出了在分布式系统上实现基于学习的优化器并评估了基于学习的优化器在分布式
+    系统上的潜在的性能提升空间。
+\end{中文摘要}
+
+% \begin{中文摘要}{\LaTeX ；接口} 
 % 笔者见到的毕业论文模板，大多是以文类的形式，少部分以宏包的形式，并且在模板中大多掺杂着各式各样的例子（除了维护频率高的模板），导致模板文件使用了大部分与形式格式不相关的内容，代码量巨大文档欠缺且不容易修改，出现问题需要查看宏包或者文类的源代码。于是，秉着仅提供实现最基本要求的理念，重构了之前所写的 \TeX\ 形式。由于第二年使用该模板，所以设计出的模板接口不能保证以后不发生重大变动，一切以文档为主。毕竟学校在发展初期，各类文件都在日渐完善，前几年时，学校标志及名称还发生变化，同时毕业论文的样式也发生了重大变化。但是可以保证的是，模板提供的接口均为中文形式\footnote{使用 \hologo{XeLaTeX} 特性，一方面增加辨识度，另一方面不拘泥于英文命名的规则。当然此举也有些许弊端，在此就不过多展开。}，并且至少更新到 2021 年，也就是笔者毕业。模板这种东西不能保证一劳永逸，一方面学校的标准制度都在发生着改变，另一方面 \hologo{LaTeX} 的宏包也在发生着改变，早先流行的宏包可能几年后就被“淘汰”掉。因此，您的使用与反馈是我不断更新的动力，希望各位不吝赐教。
 % \end{中文摘要}
-
-
